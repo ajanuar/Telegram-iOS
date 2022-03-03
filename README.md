@@ -52,7 +52,7 @@ cp -R build-system/example-configuration/* $HOME/telegram-configuration/
 mkdir -p "$HOME/telegram-bazel-cache"
 ```
 
-5. Build the app
+5. Build the app (build IPA for arch arm64 only)
 
 ```
 python3 build-system/Make/Make.py \
@@ -61,7 +61,7 @@ python3 build-system/Make/Make.py \
     build \
     --configurationPath="$HOME/telegram-configuration" \
     --buildNumber=100001 \
-    --configuration=release_universal
+    --configuration=release_arm64 
 ```
 
 6. (Optional) Generate an Xcode project
