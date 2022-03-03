@@ -14,7 +14,6 @@ build --swiftcopt=-disallow-use-new-driver
 build --features=swift.cacheable_swiftmodules
 build --features=swift.debug_prefix_map
 build --features=swift.vfsoverlay
-build --features=swift.use_global_module_cache
 
 build --strategy=Genrule=standalone
 build --spawn_strategy=standalone
