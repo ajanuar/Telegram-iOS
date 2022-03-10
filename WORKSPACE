@@ -11,19 +11,13 @@ http_archive(
 load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
 protobuf_deps()
 
-local_repository(
+load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+
+
+http_archive(
     name = "build_bazel_rules_apple",
-    path = "build-system/bazel-rules/rules_apple",
-)
-
-local_repository(
-    name = "build_bazel_rules_swift",
-    path = "build-system/bazel-rules/rules_swift",
-)
-
-local_repository(
-    name = "build_bazel_apple_support",
-    path = "build-system/bazel-rules/apple_support",
+    sha256 = "c84962b64d9ae4472adfb01ec2cf1aa73cb2ee8308242add55fa7cc38602d882",
+    url = "https://github.com/bazelbuild/rules_apple/releases/download/0.31.2/rules_apple.0.31.2.tar.gz",
 )
 
 load(
